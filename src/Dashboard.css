@@ -1,0 +1,93 @@
+html, body {
+    height: 100%; /* Ensure the root elements span the full height */
+    margin: 0; /* Remove default margin */
+  }
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Make sure the root React container also spans the full height */
+  }
+  
+  .dashboard {
+    color: #fff;
+    min-height: 100vh; 
+    background-color: #121212;
+    padding: 40px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    flex-grow: 1; /* Allows the dashboard to expand to fill available space */
+  }
+  
+  .dashboard-header {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .insights {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Use auto-fill for a more fluid layout */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the grid */
+    flex-grow: 1; /* Allows the insights grid to expand and use available space */
+  }
+  
+  .insight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  
+  .icon {
+    margin-bottom: 10px;
+    color: #4fd1c5; /* Adjust based on your preference */
+  }
+  
+  .info {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    visibility: hidden;
+    opacity: 0;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    transition: opacity 0.3s, transform 0.3s, visibility 0.3s ease-in-out;
+    z-index: 1; /* Ensure tooltip is above other elements */
+  }
+  
+  .insight:hover .info {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  
+  .logout-button {
+    padding: 10px 20px;
+    background-color: #4fd1c5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .logout-button:hover {
+    background-color: #38a89d;
+  }
+  

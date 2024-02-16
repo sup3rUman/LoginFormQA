@@ -1,0 +1,44 @@
+/* index.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    overflow-x: hidden;
+  }
+  
+  #root {
+    height: 100%;
+  }
+  
+  /* Smoothly transition background-color changes throughout the app */
+  * {
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Add a subtle fade-in effect to all text to match the animation theme */
+  @keyframes textFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  h1, h2, h3, p, a {
+    animation: textFadeIn 1s ease-out;
+  }
+  
+  /* Ensure input and button focus states are visually appealing and clear */
+  input:focus, button:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0,123,255,.25);
+  }
+  
